@@ -1,0 +1,81 @@
+.feature_highlights {
+    background: $white;
+    padding-block: 150px;
+
+    .card {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .feature_wrapper {
+            width: 100%;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 20px;
+
+            &:nth-child(2) {
+                border-inline: 1px solid #e2e2e2;
+            }
+
+            .top {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 20px;
+
+                .box_image {
+                    width: 450px;
+                    height: 288px;
+                    margin-bottom: 10px;
+
+                    .img {
+                        width: 100%;
+                        object-fit: cover;
+                        aspect-ratio: 1 / 0.638;
+                    }
+                }
+
+                .icon {}
+
+                .content {
+                    padding-inline: 68px;
+                    margin-bottom: 30px;
+
+                    .titlr {
+                        font-size: 30px;
+                        color: $main1;
+                        text-align: center;
+                        margin-block: 10px;
+                    }
+
+                    .desc {
+                        font-size: 22px;
+                        color: $main1;
+                        text-align: center;
+                        line-height: 1.4;
+                        font-weight: 200;
+                    }
+                }
+            }
+
+            >.link {
+                border: 1px solid $main1;
+                background: $main1;
+                padding: 16px 25px;
+                color: $white;
+                font-weight: 200;
+                font-size: 15px;
+                transition: all 0.3s;
+
+                &:hover {
+                    background: $white;
+                    color: $main1;
+                }
+            }
+        }
+    }
+}
