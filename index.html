@@ -14,17 +14,18 @@
 </head>
 
 <body>
-  <header class="nav">
-    <div class="container">
-      <div class="card">
-        <div class="logo-menu">
-          <div class="logo">
-            <svg version="1.1" fill="#fff" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102.6 51.3" xml:space="preserve"
-              role="presentation">
-              <g>
+  <header class="header">
+    <div class="nav">
+      <div class="container">
+        <div class="card">
+          <div class="logo-menu">
+            <div class="logo">
+              <svg version="1.1" fill="#fff" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102.6 51.3" xml:space="preserve"
+                role="presentation">
                 <g>
-                  <path d="M59.1,35.2c0,0.2,0.1,0.3,0.2,0.3c0.1,0,0.2,0,0.2-0.1L91,14.9c0.6-0.4,1.1-0.6,1.8-0.6h6.9
+                  <g>
+                    <path d="M59.1,35.2c0,0.2,0.1,0.3,0.2,0.3c0.1,0,0.2,0,0.2-0.1L91,14.9c0.6-0.4,1.1-0.6,1.8-0.6h6.9
 			                    c1.1,0,1.8,0.7,1.8,1.8v13.2c0,1.6-0.4,2.5-1.8,3.4l-8.4,5c-0.1,0.1-0.2,0.1-0.3,0.1c-0.1,0-0.2-0.1-0.2-0.4V22
 			                    c0-0.2-0.1-0.3-0.2-0.3s-0.2,0-0.2,0.1l-23,15c-0.6,0.4-1.2,0.5-1.8,0.5H50.4c-1.1,0-1.8-0.7-1.8-1.8v-19c0-0.1-0.1-0.3-0.2-0.3
 			                    c-0.1,0-0.2,0-0.2,0.1L33,25.5c-0.2,0.1-0.2,0.2-0.2,0.2c0,0.1,0,0.1,0.1,0.2l10.8,10.8c0.1,0.1,0.2,0.3,0.2,0.4
@@ -32,61 +33,600 @@
 			                    c-0.7,0.4-1.1,0.5-1.8,0.5H2.3c-1.1,0-1.8-0.7-1.8-1.8v-13c0-1.6,0.4-2.5,1.8-3.4l8.4-5.1c0.1-0.1,0.2-0.1,0.2-0.1
 			                    c0.1,0,0.2,0.1,0.2,0.4v17.3c0,0.2,0.1,0.3,0.2,0.3c0.1,0,0.2,0,0.3-0.1l28.5-17.2c0.7-0.4,1.1-0.5,1.9-0.5h15.4
 			                    c1.1,0,1.8,0.7,1.8,1.8v19.3H59.1z" class="st0 img_logo">
-                  </path>
+                    </path>
+                  </g>
                 </g>
-              </g>
-            </svg>
+              </svg>
+            </div>
+
+            <ul class="menu">
+              <li class="item" id="item">
+                <a href="#" class="link">برندها
+                  <i class="icon icon-arrow_down" id="arrow_down"></i>
+                </a>
+              </li>
+              <li class="item">
+                <a href="#" class="link">نمایندگی‌ها</a>
+              </li>
+              <li class="item">
+                <a href="#" class="link">درباره ما</a>
+              </li>
+              <li class="item">
+                <a href="#" class="link">تماس با ما</a>
+              </li>
+              <li class="item">
+                <a href="#" class="link">خدمات پس از فروش</a>
+              </li>
+              <li class="item">
+                <a href="#" class="link">فروش</a>
+              </li>
+            </ul>
           </div>
+          <div class="box">
+            <a href="#" class="location">
+              <i class=" icon icon-location"></i>
+              موقعیت مکانی
+            </a>
 
-          <ul class="menu">
-            <li class="item">
-              <a href="#" class="link">برندها</a>
-              <i class=" icon icon-arrow_down"></i>
-            </li>
-            <li class="item">
-              <a href="#" class="link">نمایندگی‌ها</a>
-            </li>
-            <li class="item">
-              <a href="#" class="link">درباره ما</a>
-            </li>
-            <li class="item">
-              <a href="#" class="link">تماس با ما</a>
-            </li>
-            <li class="item">
-              <a href="#" class="link">خدمات پس از فروش</a>
-            </li>
-            <li class="item">
-              <a href="#" class="link">فروش</a>
-            </li>
-          </ul>
+            <form class="search" name="searchForm" method="GET" action="/search" aria-label="جستجو در سایت">
+              <input type="text" name="q" class="search-input" placeholder="جستجو..." aria-label="متن جستجو"
+                autocomplete="off" />
+
+              <button type="button" class="search-close" aria-label="بستن جستجو">
+                <i class="icon icon-close"></i>
+              </button>
+
+              <button type="submit" class="search-btn" aria-label="ارسال جستجو">
+                <i class="icon icon-search"></i>
+                <span class="search-text">جستجو</span>
+              </button>
+
+              <ul class="suggestions" role="listbox" aria-label="پیشنهادات جستجو"></ul>
+            </form>
+
+          </div>
         </div>
-        <div class="box">
-          <a href="#" class="location">
-            <i class=" icon icon-location"></i>
-            موقعیت مکانی
-          </a>
+      </div>
+    </div>
+    <div class="submenu">
+      <div class="card">
 
-          <form class="search" name="searchForm" method="GET" action="/search" aria-label="جستجو در سایت">
-            <input type="text" name="q" class="search-input" placeholder="جستجو..." aria-label="متن جستجو"
-              autocomplete="off" />
+        <div class="brands_list">
+          <div class="container">
+            <div class="card2">
 
-            <button type="button" class="search-close" aria-label="بستن جستجو">
-              <i class="icon icon-close"></i>
-            </button>
+              <div class="right">
+                <div class="item active">
+                  <a href="#SUV_CUV_MPV" class="link">SUV / CUV / MPV</a>
+                </div>
+                <div class="item">
+                  <a href="#Hybrid_Electric" class="link">Hybrid / Electric</a>
+                </div>
+                <div class="item">
+                  <a href="#" class="link">Sedan</a>
+                </div>
+                <div class="item">
+                  <a href="#" class="link">در راه است</a>
+                </div>
+                <div class="item">
+                  <a href="#" class="link">نمایش همه
+                    <i class="icon icon-arrow_left"></i>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#" class="link">خودرو های کارکرده داری گواهی
+                    <i class="icon icon-arrow_left"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="left">
+                <i class="icon icon-close" id="icon_close"></i>
+              </div>
 
-            <button type="submit" class="search-btn" aria-label="ارسال جستجو">
-              <i class="icon icon-search"></i>
-              <span class="search-text">جستجو</span>
-            </button>
+            </div>
+          </div>
+        </div>
 
-            <ul class="suggestions" role="listbox" aria-label="پیشنهادات جستجو"></ul>
-          </form>
+        <div class="cars_list">
+          <div class="container">
+            <div class="card3">
 
+              <div class="item" id="SUV_CUV_MPV">
+                <h2 class="title">SUV / CUV / MPV</h2>
+                <div class="box_cars">
+
+                  <div class="car">
+                    <div class="top">
+                      <a href="#" class="link">
+                        <div class="box_image">
+                          <img src="/images/submenu/1.avif" class="img" alt="image car">
+                        </div>
+                        <h3 class="model_name">Soul</h3>
+                      </a>
+                      <div class="price">
+                        <span class="number">32.000 دلار</span>
+                        <span class="text">قیمت پایه</span>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <div class="build">
+                        <a href="#" class="link">
+                          ساختن
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                      <div class="nearby">
+                        <a href="#" class="link">
+                          یافتن خودرو های نزدیک
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="car">
+                    <div class="top">
+                      <a href="#" class="link">
+                        <div class="box_image">
+                          <img src="/images/submenu/3.avif" class="img" alt="image car">
+                        </div>
+                        <h3 class="model_name">Seltos</h3>
+                      </a>
+                      <div class="price">
+                        <span class="number">65.000 دلار</span>
+                        <span class="text">قیمت پایه</span>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <div class="build">
+                        <a href="#" class="link">
+                          ساختن
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                      <div class="nearby">
+                        <a href="#" class="link">
+                          یافتن خودرو های نزدیک
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="car">
+                    <div class="top">
+                      <a href="#" class="link">
+                        <div class="box_image">
+                          <img src="/images/submenu/5.avif" class="img" alt="image car">
+                        </div>
+                        <h3 class="model_name">Sportage</h3>
+                      </a>
+                      <div class="price">
+                        <span class="number">10.000 دلار</span>
+                        <span class="text">قیمت پایه</span>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <div class="build">
+                        <a href="#" class="link">
+                          ساختن
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                      <div class="nearby">
+                        <a href="#" class="link">
+                          یافتن خودرو های نزدیک
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="hybrid">
+                      <img src="/images/icon/hybrid.png" class="img_hybrid" alt="img">
+                      هیبریدی / الکتریکی موجود است
+                    </div>
+                  </div>
+
+                  <div class="car">
+                    <div class="top">
+                      <a href="#" class="link">
+                        <div class="box_image">
+                          <img src="/images/submenu/7.avif" class="img" alt="image car">
+                        </div>
+                        <h3 class="model_name">Sorento</h3>
+                      </a>
+                      <div class="price">
+                        <span class="number">23.000 دلار</span>
+                        <span class="text">قیمت پایه</span>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <div class="build">
+                        <a href="#" class="link">
+                          ساختن
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                      <div class="nearby">
+                        <a href="#" class="link">
+                          یافتن خودرو های نزدیک
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="hybrid">
+                      <img src="/images/icon/hybrid.png" class="img_hybrid" alt="img">
+                      هیبریدی / الکتریکی موجود است
+                    </div>
+                  </div>
+
+                  <div class="car">
+                    <div class="top">
+                      <a href="#" class="link">
+                        <div class="box_image">
+                          <img src="/images/submenu/9.avif" class="img" alt="image car">
+                        </div>
+                        <h3 class="model_name">Telluride</h3>
+                      </a>
+                      <div class="price">
+                        <span class="number">62.000 دلار</span>
+                        <span class="text">قیمت پایه</span>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <div class="build">
+                        <a href="#" class="link">
+                          ساختن
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                      <div class="nearby">
+                        <a href="#" class="link">
+                          یافتن خودرو های نزدیک
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="car">
+                    <div class="top">
+                      <a href="#" class="link">
+                        <div class="box_image">
+                          <img src="/images/submenu/11.avif" class="img" alt="image car">
+                        </div>
+                        <h3 class="model_name">Carnival MPV</h3>
+                      </a>
+                      <div class="price">
+                        <span class="number">12.000 دلار</span>
+                        <span class="text">قیمت پایه</span>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <div class="build">
+                        <a href="#" class="link">
+                          ساختن
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                      <div class="nearby">
+                        <a href="#" class="link">
+                          یافتن خودرو های نزدیک
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="hybrid">
+                      <img src="/images/icon/hybrid.png" class="img_hybrid" alt="img">
+                      هیبریدی / الکتریکی موجود است
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="item" id="Hybrid_Electric">
+                <h2 class="title">Hybrid / Electric</h2>
+                <div class="box_cars">
+
+                  <div class="car">
+                    <div class="top">
+                      <a href="#" class="link">
+                        <div class="box_image">
+                          <img src="/images/submenu/7.avif" class="img" alt="image car">
+                        </div>
+                        <h3 class="model_name">Niro Hybrid</h3>
+                      </a>
+                      <div class="price">
+                        <span class="number">522.000 دلار</span>
+                        <span class="text">قیمت پایه</span>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <div class="build">
+                        <a href="#" class="link">
+                          ساختن
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                      <div class="nearby">
+                        <a href="#" class="link">
+                          یافتن خودرو های نزدیک
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="car">
+                    <div class="top">
+                      <a href="#" class="link">
+                        <div class="box_image">
+                          <img src="/images/submenu/3.avif" class="img" alt="image car">
+                        </div>
+                        <h3 class="model_name">Sportage Hybrid</h3>
+                      </a>
+                      <div class="price">
+                        <span class="number">165.000 دلار</span>
+                        <span class="text">قیمت پایه</span>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <div class="build">
+                        <a href="#" class="link">
+                          ساختن
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                      <div class="nearby">
+                        <a href="#" class="link">
+                          یافتن خودرو های نزدیک
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="car">
+                    <div class="top">
+                      <a href="#" class="link">
+                        <div class="box_image">
+                          <img src="/images/submenu/1.avif" class="img" alt="image car">
+                        </div>
+                        <h3 class="model_name">Niro Plug-in Hybrid</h3>
+                      </a>
+                      <div class="price">
+                        <span class="number">400.000 دلار</span>
+                        <span class="text">قیمت پایه</span>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <div class="build">
+                        <a href="#" class="link">
+                          ساختن
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                      <div class="nearby">
+                        <a href="#" class="link">
+                          یافتن خودرو های نزدیک
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="car">
+                    <div class="top">
+                      <a href="#" class="link">
+                        <div class="box_image">
+                          <img src="/images/submenu/11.avif" class="img" alt="image car">
+                        </div>
+                        <h3 class="model_name">Sorento Hybrid</h3>
+                      </a>
+                      <div class="price">
+                        <span class="number">350.000 دلار</span>
+                        <span class="text">قیمت پایه</span>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <div class="build">
+                        <a href="#" class="link">
+                          ساختن
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                      <div class="nearby">
+                        <a href="#" class="link">
+                          یافتن خودرو های نزدیک
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="car">
+                    <div class="top">
+                      <a href="#" class="link">
+                        <div class="box_image">
+                          <img src="/images/submenu/11.avif" class="img" alt="image car">
+                        </div>
+                        <h3 class="model_name">Niro EV</h3>
+                      </a>
+                      <div class="price">
+                        <span class="number">126.000 دلار</span>
+                        <span class="text">قیمت پایه</span>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <div class="build">
+                        <a href="#" class="link">
+                          ساختن
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                      <div class="nearby">
+                        <a href="#" class="link">
+                          یافتن خودرو های نزدیک
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="car">
+                    <div class="top">
+                      <a href="#" class="link">
+                        <div class="box_image">
+                          <img src="/images/submenu/3.avif" class="img" alt="image car">
+                        </div>
+                        <h3 class="model_name">Sportage Plug-in Hybrid</h3>
+                      </a>
+                      <div class="price">
+                        <span class="number">102.000 دلار</span>
+                        <span class="text">قیمت پایه</span>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <div class="build">
+                        <a href="#" class="link">
+                          ساختن
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                      <div class="nearby">
+                        <a href="#" class="link">
+                          یافتن خودرو های نزدیک
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="car">
+                    <div class="top">
+                      <a href="#" class="link">
+                        <div class="box_image">
+                          <img src="/images/submenu/5.avif" class="img" alt="image car">
+                        </div>
+                        <h3 class="model_name">Carnival MPV Hybrid</h3>
+                      </a>
+                      <div class="price">
+                        <span class="number">260.000 دلار</span>
+                        <span class="text">قیمت پایه</span>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <div class="build">
+                        <a href="#" class="link">
+                          ساختن
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                      <div class="nearby">
+                        <a href="#" class="link">
+                          یافتن خودرو های نزدیک
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="car">
+                    <div class="top">
+                      <a href="#" class="link">
+                        <div class="box_image">
+                          <img src="/images/submenu/9.avif" class="img" alt="image car">
+                        </div>
+                        <h3 class="model_name">EV6</h3>
+                      </a>
+                      <div class="price">
+                        <span class="number">800.000 دلار</span>
+                        <span class="text">قیمت پایه</span>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <div class="build">
+                        <a href="#" class="link">
+                          ساختن
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                      <div class="nearby">
+                        <a href="#" class="link">
+                          یافتن خودرو های نزدیک
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="car">
+                    <div class="top">
+                      <a href="#" class="link">
+                        <div class="box_image">
+                          <img src="/images/submenu/7.avif" class="img" alt="image car">
+                        </div>
+                        <h3 class="model_name">Sorento Plug-in Hybrid</h3>
+                      </a>
+                      <div class="price">
+                        <span class="number">900.000 دلار</span>
+                        <span class="text">قیمت پایه</span>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <div class="build">
+                        <a href="#" class="link">
+                          ساختن
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                      <div class="nearby">
+                        <a href="#" class="link">
+                          یافتن خودرو های نزدیک
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="car">
+                    <div class="top">
+                      <a href="#" class="link">
+                        <div class="box_image">
+                          <img src="/images/submenu/1.avif" class="img" alt="image car">
+                        </div>
+                        <h3 class="model_name">EV9</h3>
+                      </a>
+                      <div class="price">
+                        <span class="number">524.000 دلار</span>
+                        <span class="text">قیمت پایه</span>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <div class="build">
+                        <a href="#" class="link">
+                          ساختن
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                      <div class="nearby">
+                        <a href="#" class="link">
+                          یافتن خودرو های نزدیک
+                          <i class="icon icon-arrow_left"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </header>
-
 
   <section class="hero">
     <video class="hero-video" autoplay muted loop playsinline>
@@ -97,7 +637,7 @@
     <div class="container">
       <div class="card">
         <div class="content">
-          <h1 class="name">Kia SPORTAGE</h1>
+          <h1 class="name">ماجراجویی را ادامه دهید</h1>
           <div class="btns">
             <a href="#" class="btn btn_customize">مال خودتان را بسازید</a>
             <a href="#" class="btn btn_view_product">مشاهده محصول</a>
@@ -135,7 +675,6 @@
       </div>
     </a>
   </section>
-
 
   <section class="section_cards">
     <div class="container">
@@ -190,12 +729,11 @@
     </a>
   </section>
 
-
-  <!-- <section class="category_carousel">
-    <img src="/images/kia_bg1.jpg" class="bg_image" alt="bg_image">
-
+  <section class="slider_car">
+    <img src="./public/images/kia_bg1.jpg" class="bg_image" alt="bg_image">
     <div class="container">
       <div class="card">
+
         <div class="top">
           <h2 class="title">کیا جدید را کشف کنید</h2>
           <div class="list_brands">
@@ -207,56 +745,113 @@
             </a>
           </div>
         </div>
-        <div class="center slide-cards" id="slide_cards">
-          <div class="slide">
-            <img src="/images/slider/kia1.avif" class="image_car" alt="image car">
+
+        <div class="carousel-wrap">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper" id="swiper-wrapper">
+            </div>
+
+            <div class="swiper-button-prev">
+              <i class="icon icon-arrow-right2"></i>
+            </div>
+            <div class="swiper-button-next">
+              <i class="icon icon-arrow-left2"></i>
+            </div>
           </div>
-          <div class="slide">
-            <img src="/images/slider/kia2.avif" class="image_car" alt="image car">
-          </div>
-          <div class="slide">
-            <img src="/images/slider/kia3.avif" class="image_car" alt="image car">
-          </div>
-          <div class="slide">
-            <img src="/images/slider/kia4.avif" class="image_car" alt="image car">
-          </div>
-          <div class="slide">
-            <img src="/images/slider/kia5.avif" class="image_car" alt="image car">
-          </div>
-          <div class="slide">
-            <img src="/images/slider/kia6.avif" class="image_car" alt="image car">
-          </div>
+
+          <main class="page">
+            <section class="car-card" id="slide-info">
+              <div class="car-left">
+                <div class="meta-year" id="info-year"></div>
+
+                <div class="title-row">
+                  <h1 class="car-title" id="info-model">Telluride</h1>
+                  <a class="disclaimer-link" href="#">سلب مسئولیت‌ها</a>
+                </div>
+
+                <div class="specs">
+                  <div class="spec">
+                    <div class="spec-label">شروع از</div>
+                    <div class="spec-value">
+                      <div class="price" id="info-price"><span class="footnote">1</span></div>
+                      <div class="currency">دلار</div>
+                    </div>
+                  </div>
+
+                  <div class="spec spec-divider">
+                    <div class="spec-label">قدرت تا</div>
+                    <div class="spec-value big" id="info-hp"> <span class="unit">hp</span></div>
+                  </div>
+
+                  <div class="spec spec-divider">
+                    <div class="spec-label">MPG تا</div>
+                    <div class="spec-value big">
+                      <div><span id="info-mpg"></span> <span class="unit">MPG</span></div>
+                      <div class="comb">Comb.<sup>2</sup></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <aside class="car-right">
+                <div class="build">
+                  <div class="build-text">خودت بساز</div>
+                  <div class="icon icon-arrow_left"></div>
+                </div>
+
+                <a href="#" class="cta">بیشتر بدانید</a>
+              </aside>
+            </section>
+          </main>
+
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+
+
+
+
+
+
+
+
         </div>
-        <div class="bottom"></div>
       </div>
-    </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  </section> -->
-
+  </section>
 
   <section class="fifty_fifty_wrapper">
     <div class="card">
@@ -273,7 +868,6 @@
       </div>
     </div>
   </section>
-
 
   <section class="shopping_tool_tiles">
     <div class="card">
@@ -324,15 +918,14 @@
     </div>
   </section>
 
-
   <section class="feature_highlights">
     <div class="card">
       <div class="feature_wrapper">
         <div class="top">
           <div class="box_image">
-            <img src="./public/images/kia_cards3.avif" class="img" alt="image">
+            <img src="/images/kia_cards3.avif" class="img" alt="image">
           </div>
-          <img src="./public/images/icon/loder_icon7.png" class="icon" alt="icon">
+          <img src="/images/icon/loder_icon7.png" class="icon" alt="icon">
           <div class="content">
             <h2 class="titlr">خودروهای برقی، هیبریدی و فراتر از آن</h2>
             <p class="desc">کشف کنید که کدام خودروی کیا برقی، هیبریدی یا هیبریدی شارژی برای شما مناسب است.</p>
@@ -343,9 +936,9 @@
       <div class="feature_wrapper">
         <div class="top">
           <div class="box_image">
-            <img src="./public/images/kia-cards2.avif" class="img" alt="image">
+            <img src="/images/kia-cards2.avif" class="img" alt="image">
           </div>
-          <img src="./public/images/icon/loder_icon6.png" class="icon" alt="icon">
+          <img src="/images/icon/loder_icon6.png" class="icon" alt="icon">
           <div class="content">
             <h2 class="titlr">اتصال Kia</h2>
             <p class="desc">از Kia Access برای اتصال خودرو، افزایش امنیت، راحتی و آسایش استفاده کنید.</p>
@@ -356,9 +949,9 @@
       <div class="feature_wrapper">
         <div class="top">
           <div class="box_image">
-            <img src="./public/images/kia_cards1.avif" class="img" alt="image">
+            <img src="/images/kia_cards1.avif" class="img" alt="image">
           </div>
-          <img src="./public/images/icon/loder_icon5.png" class="icon" alt="icon">
+          <img src="/images/icon/loder_icon5.png" class="icon" alt="icon">
           <div class="content">
             <h2 class="titlr">حفظ امنیت شما</h2>
             <p class="desc">مجموعه ویژگی‌های ایمنی پیشرفته کیا را بررسی کنید.</p>
@@ -369,14 +962,210 @@
     </div>
   </section>
 
+  <section class="featured_content">
+    <div class="card">
+      <div class="box_image">
+        <img src="/images/kia_featured-content.jpg" class="img" alt="image">
+      </div>
+      <div class="callout">
+        <div class="top">
+          <h2 class="title">فردا به جلو حرکت کنید</h2>
+          <p class="desc">از داستان‌ها و اخبار درون جامعه Kia الهام بگیرید.</p>
+        </div>
+        <a href="#" class="link">بیشتر ببینید</a>
+      </div>
+    </div>
+  </section>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <footer>
+    <div class="sub_footer">
+      <div class="card">
+        <div class="social_bar_updates">
+          <div class="text">
+            <h3 class="title">حتی یک لحظه را هم از دست ندهید</h3>
+            <p class="desc">برای دریافت آخرین به‌روزرسانی‌ها ثبت‌نام کنید.</p>
+          </div>
+          <a href="#" class="link">به‌روز بمانید</a>
+        </div>
+        <div class="social_bar_icons">
+          <a href="#" class="link">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a href="#" class="link">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a href="#" class="link">
+            <i class="icon icon-instagram"></i>
+          </a>
+          <a href="#" class="link">
+            <i class="icon icon-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="main_footer">
+      <div class="container">
+        <div class="card">
+          <div class="logo">
+            <svg version="1.1" fill="#fff" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102.6 51.3" xml:space="preserve"
+              role="presentation">
+              <g>
+                <g>
+                  <path d="M59.1,35.2c0,0.2,0.1,0.3,0.2,0.3c0.1,0,0.2,0,0.2-0.1L91,14.9c0.6-0.4,1.1-0.6,1.8-0.6h6.9
+			                    c1.1,0,1.8,0.7,1.8,1.8v13.2c0,1.6-0.4,2.5-1.8,3.4l-8.4,5c-0.1,0.1-0.2,0.1-0.3,0.1c-0.1,0-0.2-0.1-0.2-0.4V22
+			                    c0-0.2-0.1-0.3-0.2-0.3s-0.2,0-0.2,0.1l-23,15c-0.6,0.4-1.2,0.5-1.8,0.5H50.4c-1.1,0-1.8-0.7-1.8-1.8v-19c0-0.1-0.1-0.3-0.2-0.3
+			                    c-0.1,0-0.2,0-0.2,0.1L33,25.5c-0.2,0.1-0.2,0.2-0.2,0.2c0,0.1,0,0.1,0.1,0.2l10.8,10.8c0.1,0.1,0.2,0.3,0.2,0.4
+			                    c0,0.1-0.2,0.2-0.3,0.2h-9.8c-0.8,0-1.4-0.1-1.8-0.5l-6.6-6.6c-0.1-0.1-0.1-0.1-0.2-0.1s-0.1,0-0.2,0.1l-11,6.6
+			                    c-0.7,0.4-1.1,0.5-1.8,0.5H2.3c-1.1,0-1.8-0.7-1.8-1.8v-13c0-1.6,0.4-2.5,1.8-3.4l8.4-5.1c0.1-0.1,0.2-0.1,0.2-0.1
+			                    c0.1,0,0.2,0.1,0.2,0.4v17.3c0,0.2,0.1,0.3,0.2,0.3c0.1,0,0.2,0,0.3-0.1l28.5-17.2c0.7-0.4,1.1-0.5,1.9-0.5h15.4
+			                    c1.1,0,1.8,0.7,1.8,1.8v19.3H59.1z" class="st0 img_logo">
+                  </path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="content">
+            <div class="right">
+              <ul class="primary_menu">
+                <li class="item">
+                  <a href="#" class="link">وسایل نقلیه</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link">خودرو های کار کرده دارای گواهی</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link">چرا کیا
+                    <img src="/images/icon/heart-icon.avif" class="icon_heart" alt="heart-icon">
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link">اشتراک کیا</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link">مالکان</a>
+                </li>
+              </ul>
+              <div class="site_map">
+                <ul class="part">
+                  <h3 class="title">درباره وسایل نقلیه ما</h3>
+                  <li class="item">
+                    <a href="#" class="link">خانواده SUV</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">خانواده Sedan</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">وسایل نقلیه الکتریکی</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">فناوری ایمنی Kia</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">اتصال Kia</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">لوازم جانبی</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">درخواست بروشور</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">اطلاعات گارانتی</a>
+                  </li>
+                </ul>
+                <ul class="part">
+                  <h3 class="title">شرکتی</h3>
+                  <li class="item">
+                    <a href="#" class="link">درباره ما</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">فرصت‌های شغلی</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">امور مالی Kia</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">سرمایه‌گذاران</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">تماس با ما</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">یادآوری‌ها</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">آسیب‌پذیری</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">تنظیمات ارتباطی</a>
+                  </li>
+                </ul>
+                <ul class="part">
+                  <h3 class="title">چه خبر</h3>
+                  <li class="item">
+                    <a href="#" class="link">خرید آسان Kia</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">خودروهای مفهومی</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">تأثیر اجتماعی</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">رسانه Kia</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">سالن استعدادیابی Kia</a>
+                  </li>
+                </ul>
+                <ul class="part">
+                  <h3 class="title">قانونی</h3>
+                  <li class="item">
+                    <a href="#" class="link">حریم خصوصی</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">شرایط خدمات</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">سلب مسئولیت MPG</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">دسترسی‌پذیری</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">مدیریت کوکی‌ها</a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">گزینه‌های حریم خصوصی شما
+                      <img src="/images/icon/privacy-icon.png" class="icon" alt="icon privacy">
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="#" class="link">سیاست ارسال ایده‌های ناخواسته</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="left">
+              <div class="top">
+                <a href="#" class="link">اسپانیایی</a>
+                <a href="#" class="link">کره ای</a>
+              </div>
+              <p class="copy_right">
+                کپی‌رایت © 2025 کیا آمریکا
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
 
   <script type="module" src="/main.js"></script>
 </body>

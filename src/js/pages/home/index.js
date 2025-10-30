@@ -1,2 +1,2 @@
 import './hero';
-import './category_carousel';
+import './slider_car';

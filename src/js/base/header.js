@@ -1,3 +1,4 @@
+// search box
 (function () {
     const form = document.querySelector('.search');
     const input = form.querySelector('.search-input');
@@ -12,7 +13,7 @@
         'Nissan Altima', 'Porsche 911', 'Tesla Model 3', 'Renault Clio'
     ];
 
-    let clickedInsideSuggestions = false; 
+    let clickedInsideSuggestions = false;
 
     function openSearch() {
         form.classList.add('active');
@@ -41,7 +42,7 @@
     suggestionsEl.addEventListener('mousedown', function (e) {
         const li = e.target.closest('li');
         if (!li) return;
-        clickedInsideSuggestions = true; 
+        clickedInsideSuggestions = true;
 
         input.value = li.dataset.value;
         renderSuggestions([]);
@@ -133,3 +134,30 @@
 
     renderSuggestions([]);
 })();
+
+
+
+// sub menu
+const brandItem = document.querySelector('#item');
+const submenu = document.querySelector('.submenu');
+const arrowIcon = document.querySelector('#arrow_down');
+const closeBtn = document.querySelector('#icon_close');
+const rightItems = document.querySelectorAll('.right .item');
+
+brandItem.addEventListener('click', (e) => {
+    e.preventDefault();
+    submenu.classList.toggle('active');
+    arrowIcon.classList.toggle('rotated');
+});
+
+closeBtn.addEventListener('click', () => {
+    submenu.classList.remove('active');
+    arrowIcon.classList.remove('rotated');
+});
+
+rightItems.forEach((item) => {
+    item.addEventListener('click', () => {
+        rightItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+    });
+});

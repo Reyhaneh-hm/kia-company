@@ -1,225 +1,486 @@
-.nav {
-    background: $main1;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 999;
+.header {
+    position: relative;
 
-    .card {
+    .nav {
+        background: $main1;
+        width: 100%;
+        height: 60px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 10px;
+        position: fixed;
+        top: 0;
+        z-index: 999;
 
-        .logo-menu {
+        .card {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 70px;
+            gap: 10px;
 
-            .logo {
-                width: 90px;
+            .logo-menu {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 65px;
 
-                .img_logo {
-                    width: 100%;
+                .logo {
+                    width: 65px;
+                    height: 32px;
+
+                    .img_logo {
+                        width: 100%;
+                    }
+                }
+
+                .menu {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 30px;
+
+                    .item {
+                        position: relative;
+
+                        &:nth-child(1) {
+                            margin-left: -5px;
+                        }
+
+                        &:nth-child(1) {
+                            .link::after {
+                                width: 55%;
+                            }
+                        }
+
+                        .link {
+                            color: $white;
+
+                            &::after {
+                                content: '';
+                                display: block;
+                                width: 100%;
+                                height: 1px;
+                                background: $white;
+                                position: absolute;
+                                right: 0;
+                                bottom: -6px;
+                                opacity: 0;
+                                transition: all 0.3s;
+                            }
+
+                            >.icon {
+                                color: $white;
+                                font-size: 25px;
+                                cursor: pointer;
+                                display: inline-block;
+                                transition: all 0.3s;
+
+                                &.rotated {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            .link::after {
+                                opacity: 1;
+                            }
+                        }
+                    }
                 }
             }
 
-            .menu {
+            .box {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: 30px;
+                gap: 40px;
+                position: relative;
 
-                .item {
+                .location {
+                    color: $white;
+                    z-index: 1;
+
+                    >.icon {
+                        margin-left: 8px;
+                        font-size: 14px;
+                    }
+                }
+
+                .search {
+                    color: $white;
+                    min-height: 60px;
+                    padding-inline: 40px;
+                    background: #323a43;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
                     position: relative;
+                    overflow: visible;
+                    transition: padding 0.35s cubic-bezier(0.2, 0.9, 0.2, 1);
+                    z-index: 2;
+                    cursor: pointer;
 
-                    &:nth-child(1) {
-                        margin-left: -5px;
+                    .search-input {
+                        width: 0;
+                        border: none;
+                        outline: none;
+                        padding: 0;
+                        font-size: 16px;
+                        height: 100%;
+                        background: #fff;
+                        transition: width 0.35s cubic-bezier(0.2, 0.9, 0.2, 1), padding 0.2s;
+                        min-width: 0;
+                        cursor: text;
+                        position: absolute;
+                        left: 85px;
+                        top: 0;
                     }
 
-                    &:nth-child(1) {
-                        .link::after {
-                            width: 55%;
+                    .search-btn {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        background: transparent;
+                        border: none;
+                        color: inherit;
+                        cursor: pointer;
+                        font-size: 14px;
+                        padding: 0;
+                        height: 100%;
+                        transition: transform .35s, font-size .2s;
+
+                        .search-text {
+                            display: inline-block;
+                            line-height: 1;
+                            user-select: none;
                         }
-                    }
 
-                    .link {
-                        color: $white;
-
-                        &::after {
-                            content: '';
-                            display: block;
-                            width: 100%;
-                            height: 1px;
-                            background: $white;
-                            position: absolute;
-                            right: 0;
-                            bottom: -6px;
-                            opacity: 0;
+                        >.icon {
                             transition: all 0.3s;
                         }
                     }
 
-                    >.icon {
-                        color: $white;
-                        font-size: 25px;
+                    .search-close {
+                        position: absolute;
+                        right: -18px;
+                        top: 21px;
+                        background: transparent;
+                        border: none;
+                        display: none;
                         cursor: pointer;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            color: $red;
+                        }
+
+                        .icon {
+                            font-size: 14px;
+                        }
                     }
 
-                    &:hover {
-                        .link::after {
-                            opacity: 1;
+                    .suggestions {
+                        position: absolute;
+                        left: 85px;
+                        top: calc(100% + 6px);
+                        background: #FFF;
+                        border-radius: 6px;
+                        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+                        width: 315px;
+                        max-height: 220px;
+                        overflow-y: auto;
+                        display: none;
+                        z-index: 10;
+
+                        & li {
+                            padding: 10px;
+                            cursor: pointer;
+                            direction: rtl;
+                            color: $main1;
+                            transition: all 0.3s;
+
+                            &:hover {
+                                background: #f2f2f2;
+                            }
+                        }
+                    }
+
+
+                    &.active {
+                        .search-input {
+                            width: 315px;
+                            padding: 0 10px 0 50px;
+                        }
+
+                        .search-btn {
+                            .search-text {
+                                display: none;
+                            }
+
+                            .icon {
+                                transform: translateX(-5px);
+                                font-size: 20px;
+                                transition: transform .35s cubic-bezier(.2, .9, .2, 1), font-size .2s;
+                            }
+                        }
+
+                        .search-close {
+                            display: block;
+                        }
+
+                        .suggestions {
+                            display: block;
                         }
                     }
                 }
             }
         }
+    }
 
-        .box {
+    .submenu {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100vh;
+        background: $white;
+        opacity: 0;
+        z-index: -10;
+
+        &.active {
+            opacity: 1;
+            z-index: 20;
+        }
+
+        >.card {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            position: relative;
+            flex-direction: column;
+            gap: 55px;
 
-            .location {
-                color: $white;
-                z-index: 1;
+            .brands_list {
+                background: #33404a;
+                height: 60px;
+                width: 100%;
+                display: flex;
+                align-items: center;
 
-                >.icon {
-                    margin-left: 8px;
-                    font-size: 14px;
+                .card2 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 10px;
+
+                    .right {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 25px;
+
+                        >.item {
+                            position: relative;
+                            transition: all 0.3s;
+
+                            >.link {
+                                color: #d0d0d0;
+                                font-size: 14px;
+                                transition: all 0.3s;
+
+                                >.icon {
+                                    color: #d0d0d0;
+                                    transition: all 0.3s;
+                                }
+                            }
+
+                            &::after,
+                            &::before {
+                                content: "";
+                                display: block;
+                                width: 100%;
+                                height: 2px;
+                                background: $white;
+                                position: absolute;
+                                right: 0;
+                                opacity: 0;
+                                transition: all 0.3s;
+                            }
+
+                            &::after {
+                                top: -6px;
+                            }
+
+                            &::before {
+                                bottom: -2px;
+                            }
+
+                            &.active {
+                                &::after {
+                                    opacity: 1;
+                                }
+
+                                >.link {
+                                    color: $white;
+
+                                    >.icon {
+                                        color: $white;
+                                    }
+                                }
+                            }
+
+                            &:hover {
+                                &::before {
+                                    opacity: 1;
+                                }
+
+                                >.link {
+                                    color: $white;
+
+                                    >.icon {
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .left {
+                        >.icon {
+                            color: $white;
+                            cursor: pointer;
+                            transition: all 0.3s;
+
+                            &:hover {
+                                color: $red;
+                            }
+                        }
+                    }
                 }
             }
 
-            .search {
-                color: $white;
-                min-height: 60px;
-                padding-inline: 40px;
-                background: #323a43;
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                position: relative;
-                overflow: visible;
-                transition: padding 0.35s cubic-bezier(0.2, 0.9, 0.2, 1);
-                z-index: 2;
-                cursor: pointer;
+            .cars_list {
+                overflow-y: scroll;
+                height: 80vh;
+                scroll-behavior: smooth;
 
-                .search-input {
-                    width: 0;
-                    border: none;
-                    outline: none;
-                    padding: 0;
-                    font-size: 16px;
-                    height: 100%;
-                    background: #fff;
-                    transition: width 0.35s cubic-bezier(0.2, 0.9, 0.2, 1), padding 0.2s;
-                    min-width: 0;
-                    cursor: text;
-                    position: absolute;
-                    left: 85px;
-                    top: 0;
-                }
+                .card3 {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 80px;
 
-                .search-btn {
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 8px;
-                    background: transparent;
-                    border: none;
-                    color: inherit;
-                    cursor: pointer;
-                    font-size: 14px;
-                    padding: 0;
-                    height: 100%;
-                    transition: transform .35s, font-size .2s;
-
-                    .search-text {
-                        display: inline-block;
-                        line-height: 1;
-                        user-select: none;
-                    }
-
-                    >.icon {
-                        transition: all 0.3s;
-                    }
-                }
-
-                .search-close {
-                    position: absolute;
-                    right: -18px;
-                    top: 21px;
-                    background: transparent;
-                    border: none;
-                    display: none;
-                    cursor: pointer;
-                    transition: all 0.3s;
-
-                    &:hover {
-                        color: $red;
-                    }
-
-                    .icon {
-                        font-size: 14px;
-                    }
-                }
-
-                .suggestions {
-                    position: absolute;
-                    left: 85px;
-                    top: calc(100% + 6px);
-                    background: #FFF;
-                    border-radius: 6px;
-                    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-                    width: 315px;
-                    max-height: 220px;
-                    overflow-y: auto;
-                    display: none;
-                    z-index: 10;
-
-                    & li {
-                        padding: 10px;
-                        cursor: pointer;
-                        direction: rtl;
-                        color: $main1;
-                        transition: all 0.3s;
-
-                        &:hover {
-                            background: #f2f2f2;
-                        }
-                    }
-                }
-
-
-                &.active {
-                    .search-input {
-                        width: 315px;
-                        padding: 0 10px 0 50px;
-                    }
-
-                    .search-btn {
-                        .search-text {
-                            display: none;
+                    .item {
+                        .title {
+                            font-size: 40px;
+                            color: $main1;
+                            margin-bottom: 20px;
                         }
 
-                        .icon {
-                            transform: translateX(-5px);
-                            font-size: 20px;
-                            transition: transform .35s cubic-bezier(.2, .9, .2, 1), font-size .2s;
+                        .box_cars {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr 1fr;
+                            row-gap: 35px;
+
+                            .car {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 15px;
+
+                                .top {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 5px;
+
+                                    >.link {
+                                        .box_image {
+                                            width: 300px;
+                                            height: 170px;
+
+                                            .img {
+                                                width: 100%;
+                                                object-fit: contain;
+                                            }
+                                        }
+
+                                        .model_name {
+                                            font-size: 30px;
+                                            color: $main1;
+                                        }
+                                    }
+
+                                    .price {
+                                        .number {
+                                            font-size: 18px;
+                                            font-weight: 600;
+                                            color: $main1;
+                                        }
+
+                                        .text {
+                                            font-size: 14px;
+                                            color: #9ea1a2;
+                                            font-weight: 200;
+                                        }
+                                    }
+                                }
+
+                                .cta {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 20px;
+
+                                    .build {
+                                        font-size: 16px;
+                                        font-weight: 200;
+
+                                        >.link {
+                                            color: $main1;
+
+                                            >.icon {
+                                                color: $main1;
+                                                transition: all 0.3s;
+                                            }
+                                        }
+
+                                        &:hover {
+                                            >.link {
+                                                >.icon {
+                                                    transform: translateX(-2px);
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .nearby {
+                                        font-size: 16px;
+                                        font-weight: 200;
+
+                                        >.link {
+                                            color: $main1;
+
+                                            >.icon {
+                                                color: $main1;
+                                                transition: all 0.3s;
+                                            }
+                                        }
+
+                                        &:hover {
+                                            >.link {
+                                                >.icon {
+                                                    transform: translateX(-2px);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .hybrid {
+                                    color: $green;
+                                    font-size: 14px;
+                                    position: relative;
+                                    top: -10px;
+
+                                    .img_hybrid {}
+                                }
+                            }
                         }
-                    }
-
-                    .search-close {
-                        display: block;
-                    }
-
-                    .suggestions {
-                        display: block;
                     }
                 }
             }

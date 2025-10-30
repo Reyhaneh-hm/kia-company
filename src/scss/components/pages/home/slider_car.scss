@@ -1,0 +1,464 @@
+.slider_car {
+    background: $white;
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+
+    .bg_image {
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .card {
+        width: 100%;
+        position: relative;
+        top: 480px;
+
+
+        .top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+
+            .title {
+                color: $white;
+                font-size: 55px;
+            }
+
+            .list_brands {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 40px;
+
+                .name_brand {
+                    color: #d0d0d0;
+                    font-size: 24px;
+                    padding-top: 10px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    position: relative;
+                    transition: all 0.2s;
+
+                    &.active {
+                        color: $white;
+
+                        &::after {
+                            display: block;
+                        }
+                    }
+
+                    &:hover {
+                        color: $white;
+
+                        &::after {
+                            display: block;
+                        }
+                    }
+                }
+
+                .link {
+                    color: #d0d0d0;
+                    font-size: 24px;
+                    font-weight: bold;
+                    padding-top: 10px;
+                    position: relative;
+                    transition: all 0.2s;
+
+                    &:hover {
+                        color: $white;
+
+                        &::after {
+                            display: block;
+                        }
+                    }
+
+                    .icon {}
+                }
+
+                .name_brand,
+                .link {
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 3px;
+                        background: $white;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        transition: all 0.3s;
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .carousel-wrap {
+            margin-top: 88px;
+            margin-inline: auto;
+            position: relative;
+        }
+
+        .mySwiper {
+            width: 96%;
+            height: 400px;
+        }
+
+        .mySwiper .swiper-slide {
+            width: 33.333%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 450ms cubic-bezier(.25, .8, .25, 1);
+            transform-origin: center center;
+            opacity: 0.9;
+        }
+
+        .mySwiper .slide-card {
+            width: 100%;
+            transition: transform 450ms cubic-bezier(.25, .8, .25, 1), box-shadow 300ms;
+        }
+
+        .slide-card img {
+            display: block;
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .mySwiper .swiper-slide-active {
+            transform: scale(1.2);
+            z-index: 5;
+            opacity: 1;
+            width: 550px !important;
+        }
+
+        .mySwiper .swiper-slide-next,
+        .mySwiper .swiper-slide-prev {
+            transform: scale(0.4);
+            z-index: 3;
+            opacity: 0.95;
+            margin: 0 !important;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            background-color: #cfd1d4;
+            display: block;
+            color: $main1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+
+            >.icon {
+                color: #38434c;
+                transition: all 0.3s;
+                font-size: 14px;
+            }
+
+            svg {
+                display: none;
+            }
+
+            &:hover {
+                background: #38434c;
+
+                .icon {
+                    color: #cfd1d4;
+                }
+            }
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 18px;
+        }
+
+        .slide-info {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 6px;
+            width: min(820px, 95%);
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+            padding: 14px 18px;
+            text-align: center;
+            z-index: 50;
+        }
+
+        .slide-info .meta .year {
+            font-weight: 600;
+            color: #888;
+            display: block;
+        }
+
+        .slide-info .meta .model {
+            font-size: 20px;
+            margin: 4px 0 8px;
+        }
+
+        .slide-info .meta .specs {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            font-size: 14px;
+            color: #333;
+        }
+
+        @media (max-width: 900px) {
+            .mySwiper .swiper-slide {
+                width: 50%;
+            }
+
+            .slide-card img {
+                height: 260px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .mySwiper .swiper-slide {
+                width: 80%;
+            }
+
+            .slide-card img {
+                height: 220px;
+            }
+
+            .slide-info {
+                width: 96%;
+                bottom: 10px;
+            }
+        }
+
+
+
+
+        .page {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .car-card {
+            width: 100%;
+            max-width: 900px;
+            min-width: 300px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+        .car-left {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .meta-year {
+            font-size: 20px;
+            font-weight: 600;
+            color: $main1;
+            margin-bottom: 6px;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: flex-end;
+            gap: 18px;
+        }
+
+        .car-title {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 60px;
+            line-height: 0.95;
+            margin: 0;
+            color: $main1;
+            letter-spacing: -1px;
+            margin-bottom: 12px;
+        }
+
+        .disclaimer-link {
+            font-size: 14px;
+            color: $main1;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        .specs {
+            display: flex;
+            align-items: flex-start;
+            gap: 0;
+            margin-top: 8px;
+            border-top: 0;
+        }
+
+        .spec {
+            flex: 1 1 0;
+            padding: 18px 0 28px 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 80px;
+        }
+
+        .spec-divider {
+            border-right: 1px solid $separator;
+            padding-right: 28px;
+        }
+
+        .spec-label {
+            font-size: 16px;
+            color: $text;
+            letter-spacing: 0.6px;
+            margin-bottom: 6px;
+        }
+
+        .spec-value {
+            display: flex;
+            align-items: flex-end;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 26px;
+            color: $main1;
+        }
+
+        .currency {
+            font-size: 18px;
+            margin-right: 4px;
+            color: $main1;
+            font-weight: 00;
+        }
+
+        .price {
+            font-size: 30px;
+            line-height: 1;
+        }
+
+        .footnote {
+            font-size: 11px;
+            vertical-align: super;
+            margin-left: 2px;
+            color: $text;
+            font-weight: 600;
+        }
+
+        .spec-value.big {
+            font-size: 34px;
+            line-height: 1;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .unit {
+            font-family: "Source Sans 3", sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            display: inline-block;
+            margin-left: 6px;
+            color: $main1;
+        }
+
+        .comb {
+            font-size: 22px;
+            font-weight: 200;
+            margin-top: -4px;
+        }
+
+        .car-right {
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 25px;
+            justify-content: flex-start;
+            padding-top: 6px;
+        }
+
+        .build {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            color: $main1;
+            font-weight: 200;
+            font-size: 20px;
+
+            .build-text {
+                transition: all 0.3s;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .build-arrow {
+            font-size: 24px;
+            color: $main1;
+            transform: translateY(-1px);
+        }
+
+        .cta {
+            background: $main1;
+            color: $white;
+            border: 1px solid $main1;
+            padding: 17px 40px;
+            font-weight: 200;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+
+            &:hover {
+                background: $white;
+                color: $main1;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .car-title {
+                font-size: 64px;
+            }
+
+            .spec-value.big {
+                font-size: 28px;
+            }
+
+            .car-right {
+                width: 180px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .car-card {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .car-right {
+                align-items: flex-start;
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-top: 6px;
+            }
+
+            .cta {
+                align-self: auto;
+            }
+        }
+
+
+    }
+}
