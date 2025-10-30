@@ -2,6 +2,10 @@
     background: $white;
 
     .card {
+        @media screen and (max-width:425px) {
+            flex-direction: column-reverse !important;
+        }
+
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -12,6 +16,12 @@
             grid-template-columns: 1fr 1fr;
 
             .item {
+                @media screen and (max-width:1440px) {
+                    img.img_icon {
+                        width: 65px !important;
+                    }
+                }
+
                 border: 1px solid rgba(112, 112, 112, 0.21);
                 width: 100%;
                 aspect-ratio: 1 / 0.97;
@@ -31,6 +41,10 @@
                 .img_icon {}
 
                 .text {
+                    @media screen and (max-width:1440px) {
+                        font-size: 22px !important;
+                    }
+
                     font-size: 28px;
                     text-align: center;
                     line-height: 1.3;

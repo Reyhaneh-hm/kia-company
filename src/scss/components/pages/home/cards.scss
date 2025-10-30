@@ -6,13 +6,26 @@
         padding-block: 70px 60px;
 
         .slide_card {
+            @media screen and (max-width:425px) {
+                overflow: scroll !important;
+            }
+
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: flex-start;
             gap: 40px;
 
+
             .item {
+                @media screen and (max-width:1440px) {
+                    min-height: 535px !important;
+                }
+
+                @media screen and (max-width:425px) {
+                    min-height: 415px !important;
+                }
+
                 width: 100%;
                 max-width: 545px;
                 min-width: 300px;

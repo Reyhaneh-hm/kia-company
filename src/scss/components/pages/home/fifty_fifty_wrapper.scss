@@ -2,11 +2,19 @@
     background: $white;
 
     >.card {
+        @media screen and (max-width:425px) {
+            flex-direction: column !important;
+        }
+
         display: flex;
         align-items: center;
         justify-content: space-between;
 
         >.content {
+            @media screen and (max-width:1440px) {
+                padding: 78px 90px !important;
+            }
+
             height: -webkit-fill-available;
             display: flex;
             align-items: flex-start;
@@ -36,6 +44,10 @@
                 }
 
                 .desc {
+                    @media screen and (max-width:1440px) {
+                        font-size: 18px !important;
+                    }
+
                     font-size: 20px;
                     line-height: 1.4;
                     color: $main1;

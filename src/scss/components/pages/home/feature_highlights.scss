@@ -1,8 +1,16 @@
 .feature_highlights {
+    @media screen and (max-width:425px) {
+        padding-block: 100px !important;
+    }
+
     background: $white;
     padding-block: 140px;
 
     .card {
+        @media screen and (max-width:425px) {
+            overflow: scroll !important;
+        }
+
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -46,6 +54,10 @@
                     margin-bottom: 30px;
 
                     .titlr {
+                        @media screen and (max-width:1440px) {
+                            font-size: 26px !important;
+                        }
+
                         font-size: 30px;
                         color: $main1;
                         text-align: center;
@@ -53,6 +65,10 @@
                     }
 
                     .desc {
+                        @media screen and (max-width:1440px) {
+                            font-size: 18px !important;
+                        }
+
                         font-size: 22px;
                         color: $main1;
                         text-align: center;

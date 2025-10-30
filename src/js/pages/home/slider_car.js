@@ -7,7 +7,7 @@ const datas = [
     {
         year: "2025",
         model: "Sportage",
-        image: "./public/images/slider/kia2.avif",
+        image: "/images/slider/kia2.avif",
         startingPrice: "28,990",
         horsepower: "187",
         mpg: "23-30"
@@ -15,7 +15,7 @@ const datas = [
     {
         year: "2025",
         model: "Sorento",
-        image: "./public/images/slider/kia1.avif",
+        image: "/images/slider/kia1.avif",
         startingPrice: "32,190",
         horsepower: "281",
         mpg: "23-25"
@@ -23,7 +23,7 @@ const datas = [
     {
         year: "2026",
         model: "Sorento",
-        image: "./public/images/slider/kia3.avif",
+        image: "/images/slider/kia3.avif",
         startingPrice: "32,190",
         horsepower: "281",
         mpg: "23-25"
@@ -31,7 +31,7 @@ const datas = [
     {
         year: "2026",
         model: "Telluride",
-        image: "./public/images/slider/kia4.avif",
+        image: "/images/slider/kia4.avif",
         startingPrice: "36,690",
         horsepower: "291",
         mpg: "20-26"
@@ -39,7 +39,7 @@ const datas = [
     {
         year: "2026",
         model: "Sportage",
-        image: "./public/images/slider/kia5.avif",
+        image: "/images/slider/kia5.avif",
         startingPrice: "28,990",
         horsepower: "187",
         mpg: "23-30"
@@ -47,7 +47,7 @@ const datas = [
     {
         year: "2025",
         model: "Telluride",
-        image: "./public/images/slider/kia6.avif",
+        image: "/images/slider/kia6.avif",
         startingPrice: "36,690",
         horsepower: "291",
         mpg: "20-26"
@@ -81,9 +81,9 @@ const swiper = new Swiper('.mySwiper', {
     slideToClickedSlide: true,
     speed: 600,
     breakpoints: {
-        0: { slidesPerView: 1.1 },
-        600: { slidesPerView: 2 },
-        900: { slidesPerView: 3 }
+        // 1441: { slidesPerView: 2,spaceBetween: 100},
+        // 768: { slidesPerView: 2 },
+        // 425: { slidesPerView: 1 }
     }
 });
 

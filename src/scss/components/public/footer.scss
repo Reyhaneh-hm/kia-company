@@ -1,11 +1,27 @@
 footer {
     .sub_footer {
         .card {
+            @media screen and (max-width:1440px) {
+                grid-template-columns: 2fr 1fr !important;
+            }
+
+            @media screen and (max-width:425px) {
+                grid-template-columns: 1fr !important;
+            }
+
             height: 131px;
             display: grid;
             grid-template-columns: 2.2fr 0.8fr;
 
             .social_bar_updates {
+                @media screen and (max-width:1440px) {
+                    padding: 40px 80px !important;
+                }
+
+                @media screen and (max-width:425px) {
+                    flex-direction: column !important;
+                }
+
                 background: #1f2c35;
                 padding: 40px 80px 40px 250px;
                 display: flex;
@@ -79,6 +95,10 @@ footer {
     }
 
     .main_footer {
+        @media screen and (max-width:425px) {
+            margin-top: 170px !important;
+        }
+
         background: $main1;
 
         .card {
@@ -99,6 +119,15 @@ footer {
             }
 
             .content {
+                @media screen and (max-width:1440px) {
+                    grid-template-columns: 5fr 1fr !important;
+                }
+
+                @media screen and (max-width:425px) {
+                    display: flex !important;
+                    flex-direction: column;
+                }
+
                 width: 100%;
                 display: grid;
                 grid-template-columns: 5.5fr 0.5fr;
@@ -106,6 +135,10 @@ footer {
 
 
                 >.right {
+                    @media screen and (max-width:425px) {
+                        grid-template-columns: 1fr !important;
+                    }
+
                     width: 100%;
                     display: grid;
                     grid-template-columns: 1fr 4fr;
@@ -128,6 +161,10 @@ footer {
                     }
 
                     .site_map {
+                        @media screen and (max-width:425px) {
+                            grid-template-columns: 1fr !important;
+                        }
+
                         display: grid;
                         grid-template-columns: 1fr 1fr 1fr 1fr;
 
@@ -158,13 +195,17 @@ footer {
 
                 >.left {
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     justify-content: space-between;
                     flex-direction: column;
                     gap: 10px;
                     padding-top: 30px;
 
                     >.top {
+                        @media screen and (max-width:1440px) {
+                            justify-items: start !important;
+                        }
+
                         display: grid;
                         grid-template-columns: 1fr 1fr;
                         width: 100%;

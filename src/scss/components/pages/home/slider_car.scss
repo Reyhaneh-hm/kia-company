@@ -1,8 +1,12 @@
 .slider_car {
+    @media screen and (max-width:1440px) {
+        height: 128vh !important;
+    }
+
     background: $white;
     overflow: hidden;
     position: relative;
-    min-height: 100vh;
+    height: 148vh;
 
     .bg_image {
         width: 100%;
@@ -13,9 +17,13 @@
     }
 
     .card {
+        @media screen and (max-width:1440px) {
+            top: 205px !important;
+        }
+
         width: 100%;
         position: relative;
-        top: 480px;
+        top: 430px;
 
 
         .top {
@@ -25,6 +33,10 @@
             gap: 30px;
 
             .title {
+                @media screen and (max-width:1440px) {
+                    font-size: 45px !important;
+                }
+
                 color: $white;
                 font-size: 55px;
             }
@@ -36,6 +48,10 @@
                 gap: 40px;
 
                 .name_brand {
+                    @media screen and (max-width:1440px) {
+                        font-size: 18px !important;
+                    }
+
                     color: #d0d0d0;
                     font-size: 24px;
                     padding-top: 10px;
@@ -62,6 +78,10 @@
                 }
 
                 .link {
+                    @media screen and (max-width:1440px) {
+                        font-size: 18px !important;
+                    }
+
                     color: #d0d0d0;
                     font-size: 24px;
                     font-weight: bold;
@@ -98,6 +118,12 @@
             }
         }
 
+        // .swiper-wrapper {
+        //     @media screen and (max-width:1440px) {
+        //         transform: translate3d(1510px, 0px, 0px) !important;
+        //     }
+        // }
+
         .carousel-wrap {
             margin-top: 88px;
             margin-inline: auto;
@@ -132,6 +158,11 @@
         }
 
         .mySwiper .swiper-slide-active {
+            @media screen and (max-width:1440px) {
+                transform: scale(1) !important;
+                margin: 0 !important;
+            }
+
             transform: scale(1.2);
             z-index: 5;
             opacity: 1;
@@ -140,6 +171,11 @@
 
         .mySwiper .swiper-slide-next,
         .mySwiper .swiper-slide-prev {
+            @media screen and (max-width:1440px) {
+                transform: scale(0.3) !important;
+                width: 565px !important;
+            }
+
             transform: scale(0.4);
             z-index: 3;
             opacity: 0.95;
@@ -251,6 +287,10 @@
         }
 
         .car-card {
+            @media screen and (max-width:1440px) {
+                max-width: 835px !important;
+            }
+
             width: 100%;
             max-width: 900px;
             min-width: 300px;
