@@ -7,7 +7,7 @@ const datas = [
     {
         year: "2025",
         model: "Sportage",
-        image: "/images/slider/kia2.avif",
+        image: "/images/submenu/1.png",
         startingPrice: "28,990",
         horsepower: "187",
         mpg: "23-30"
@@ -15,7 +15,7 @@ const datas = [
     {
         year: "2025",
         model: "Sorento",
-        image: "/images/slider/kia1.avif",
+        image: "/images/submenu/2.png",
         startingPrice: "32,190",
         horsepower: "281",
         mpg: "23-25"
@@ -23,7 +23,7 @@ const datas = [
     {
         year: "2026",
         model: "Sorento",
-        image: "/images/slider/kia3.avif",
+        image: "/images/submenu/3.png",
         startingPrice: "32,190",
         horsepower: "281",
         mpg: "23-25"
@@ -31,7 +31,7 @@ const datas = [
     {
         year: "2026",
         model: "Telluride",
-        image: "/images/slider/kia4.avif",
+        image: "/images/submenu/4.png",
         startingPrice: "36,690",
         horsepower: "291",
         mpg: "20-26"
@@ -39,7 +39,7 @@ const datas = [
     {
         year: "2026",
         model: "Sportage",
-        image: "/images/slider/kia5.avif",
+        image: "/images/submenu/5.png",
         startingPrice: "28,990",
         horsepower: "187",
         mpg: "23-30"
@@ -47,7 +47,7 @@ const datas = [
     {
         year: "2025",
         model: "Telluride",
-        image: "/images/slider/kia6.avif",
+        image: "/images/submenu/6.png",
         startingPrice: "36,690",
         horsepower: "291",
         mpg: "20-26"
